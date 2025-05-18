@@ -1,7 +1,8 @@
 /* src/style.css */
 body {
-    background-color: #f0f0f0;
-    text-align: center;
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #7af795;
+  color: #333;
+  text-align: center;
+  padding: 50px;
 }
-
