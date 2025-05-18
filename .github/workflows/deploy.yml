@@ -14,10 +14,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      - name: Make public directory
+        run: mkdir -p public
+
       - name: Copy files to public directory
-        run: |
-          mkdir -p public
-          cp -r src/* public/
+        run: cp -r src/* public/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
