@@ -8,20 +8,17 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Copy files from src to public
-      run: |
-        rm -rf public
-        mkdir public
-        cp -r src/* public/
+      - name: Copy files to public directory
+        run: |
+          mkdir public
+          cp -r src/* public/
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        publish_dir: ./public
-        publish_branch: gh-pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{secrets.PERSONAL_ACCESS_TOKEN}}
+          publish_dir: ./public
