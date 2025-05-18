@@ -17,7 +17,7 @@ jobs:
       - name: Make public directory
         run: mkdir -p public
 
-      - name: Copy files to public directory
+      - name: Copy files to public directooiry
         run: cp -r src/* public/
 
       - name: Deploy to GitHub Pages
